@@ -1,6 +1,8 @@
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
+import torch
+custom_class = torch.classes.my_custom_lib.MyCustomClass()
 plt=platform.system()
 if plt == 'Linux': pathlib.WindowsPath=pathlib.PosixPath
 
