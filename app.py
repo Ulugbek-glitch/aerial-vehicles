@@ -1,9 +1,11 @@
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
-temp=pathlib.PosixPath
-pathlib.PosixPath=pathlib.WindowsPath
-
+import plotly.express as px
+import platfrom
+plt=platform.system()
+if plt == 'Linux': pathlib.WindowsPath=pathlib.PosixPath
+  
 st.title("Havo yo'llarida harakatlanuvchi vositalarni klassifikatsiya qiluvchi model")
 file=st.file_uploader('Rasm yuklash', type=['png','jpeg','gif','svg'])
 st.image(file)
