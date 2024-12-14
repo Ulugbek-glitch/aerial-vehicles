@@ -7,7 +7,7 @@ plt=platform.system()
 if plt == 'Linux': pathlib.WindowsPath=pathlib.PosixPath
   
 st.title("Havo yo'llarida harakatlanuvchi vositalarni klassifikatsiya qiluvchi model")
-file=st.file_uploader('Rasm yuklash', type=['png','jpeg','gif','svg'])
+file=st.file_uploader('Rasm yuklash', type=['png','jpeg','gif','svg','jpg'])
 st.image(file)
 img=PILImage.create(file)
 model=load_learner('aerial-vehicles.pkl')
